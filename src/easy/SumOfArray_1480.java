@@ -1,4 +1,4 @@
-package medium;
+package easy;
 
 public class SumOfArray_1480 {
     public static void main(String[] args) {

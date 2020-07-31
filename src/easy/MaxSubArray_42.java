@@ -1,4 +1,4 @@
-package medium;
+package easy;
 
 public class MaxSubArray_42 {
     /**
