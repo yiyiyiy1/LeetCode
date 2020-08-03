@@ -1,5 +1,8 @@
 package easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，
  * 即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。
@@ -17,7 +20,30 @@ package easy;
  */
 public class RomanToInt {
     public static void main(String[] args) {
+        String str = "IV";
+        System.out.println(romanToInt(str));
 
+    }
+    public static int romanToInt(String s) {
+        Map<String,Integer> map = new HashMap<>();
+        map.put("I",1);
+        map.put("V",5);
+        map.put("X",10);
+        map.put("L",50);
+        map.put("C",100);
+        map.put("D",500);
+        map.put("M",1000);
+        int sum=0;
+        for (int i = 0; i < s.length(); i++) {
+           int now = map.get(String.valueOf(s.charAt(i)));
+           int beh;
+           if(i<=s.length()-2){
+               beh= map.get(String.valueOf(s.charAt(i+1)));
+               if(beh>now)now=-now;
+           }
+           sum=sum+now;
+        }
+        return sum;
     }
 
 }
