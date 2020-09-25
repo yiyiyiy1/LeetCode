@@ -1,9 +1,12 @@
 package test;
 
+import bean.TreeNode;
+import bean.TrieNode;
+
 import java.util.*;
 
-class Main{
-    public static void main(String[] args) {
 
-    }
+public class Main{
+
+
 }
